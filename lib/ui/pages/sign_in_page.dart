@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wallet_app/shared/theme.dart';
+import 'package:wallet_app/ui/widgets/buttons.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -111,24 +112,8 @@ class SignInPage extends StatelessWidget {
                     const SizedBox(
                       height: 30,
                     ),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 50,
-                      child: TextButton(
-                        onPressed: () {},
-                        style: TextButton.styleFrom(
-                            backgroundColor: purpleColor,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(56),
-                            )),
-                        child: Text(
-                          'Sign In',
-                          style: whiteTextStyle.copyWith(
-                            fontSize: 16,
-                            fontWeight: semiBold,
-                          ),
-                        ),
-                      ),
+                    const CustomFilledButton(
+                      title: 'Sign In',
                     ),
                   ],
                 )
