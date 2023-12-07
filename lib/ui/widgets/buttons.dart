@@ -38,3 +38,42 @@ class CustomFilledButton extends StatelessWidget {
     );
   }
 }
+
+class CustomTextButton extends StatelessWidget {
+  final String title;
+  final double width;
+  final double height;
+  final VoidCallback? onPressed;
+
+  const CustomTextButton({
+    super.key,
+    required this.title,
+    this.width = double.infinity,
+    this.height = 24,
+    this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: width,
+      height: height,
+      child: TextButton(
+        onPressed: onPressed,
+        style: TextButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(56),
+          ),
+          padding: const EdgeInsets.all(0),
+          foregroundColor: Colors.white,
+        ),
+        child: Text(
+          title,
+          style: greyTextStyle.copyWith(
+            fontSize: 16,
+          ),
+        ),
+      ),
+    );
+  }
+}

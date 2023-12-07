@@ -112,8 +112,9 @@ class SignInPage extends StatelessWidget {
                     const SizedBox(
                       height: 30,
                     ),
-                    const CustomFilledButton(
+                    CustomFilledButton(
                       title: 'Sign In',
+                      onPressed: () {},
                     ),
                   ],
                 )
@@ -123,25 +124,9 @@ class SignInPage extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          SizedBox(
-            width: double.infinity,
-            height: 24,
-            child: TextButton(
-              onPressed: () {},
-              style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(56),
-                ),
-                padding: const EdgeInsets.all(0),
-                foregroundColor: Colors.white,
-              ),
-              child: Text(
-                'Create New Account',
-                style: greyTextStyle.copyWith(
-                  fontSize: 16,
-                ),
-              ),
-            ),
+          CustomTextButton(
+            title: 'Create New Account',
+            onPressed: () {},
           ),
           const SizedBox(
             height: 20,
