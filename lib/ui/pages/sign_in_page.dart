@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wallet_app/shared/theme.dart';
 import 'package:wallet_app/ui/widgets/buttons.dart';
+import 'package:wallet_app/ui/widgets/forms.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -52,72 +53,32 @@ class SignInPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // NOTE : Email
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Email Address',
-                      style: blackTextStyle.copyWith(
-                        fontWeight: medium,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    TextFormField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(14),
-                        ),
-                        contentPadding: const EdgeInsets.all(12),
-                      ),
-                    ),
-                  ],
-                ),
+                const CustomFormField(title: 'Email Address'),
                 const SizedBox(
                   height: 16,
                 ),
                 // NOTE : Password
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Password',
-                      style: blackTextStyle.copyWith(
-                        fontWeight: medium,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    TextFormField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(14),
-                        ),
-                        contentPadding: const EdgeInsets.all(12),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        'Forgot Password',
-                        style: blueTextStyle,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    CustomFilledButton(
-                      title: 'Sign In',
-                      onPressed: () {},
-                    ),
-                  ],
-                )
+                const CustomFormField(
+                  title: 'Password',
+                  obscureText: true,
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    'Forgot Password',
+                    style: blueTextStyle,
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                CustomFilledButton(
+                  title: 'Sign In',
+                  onPressed: () {},
+                ),
               ],
             ),
           ),
