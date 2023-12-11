@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:wallet_app/shared/theme.dart';
-import 'package:wallet_app/ui/pages/sign_in_page.dart';
 import 'package:wallet_app/ui/widgets/buttons.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -106,7 +105,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             CustomFilledButton(
                               title: 'Get Started',
                               onPressed: () {
-                                Navigator.pushNamed(context, '/sign-in');
+                                Navigator.pushNamed(context, '/sign-up');
                               },
                             ),
                             const SizedBox(height: 20),
