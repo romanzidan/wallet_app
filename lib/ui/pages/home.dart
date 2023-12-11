@@ -7,6 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: lightBackgroundColor,
       body: ListView(
         padding: const EdgeInsets.symmetric(
           horizontal: 24,
@@ -124,6 +125,55 @@ class HomePage extends StatelessWidget {
             ),
           ),
           // Level
+          Container(
+            margin: const EdgeInsets.only(
+              top: 20,
+            ),
+            padding: const EdgeInsets.all(22),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: whiteColor,
+            ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      'Level 1',
+                      style: blackTextStyle.copyWith(
+                        fontWeight: medium,
+                      ),
+                    ),
+                    const Spacer(),
+                    Text(
+                      '55%',
+                      style: greenTextStyle.copyWith(
+                        fontWeight: semiBold,
+                      ),
+                    ),
+                    Text(
+                      'of Rp 20.000',
+                      style: blackTextStyle.copyWith(
+                        fontWeight: semiBold,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(55),
+                  child: LinearProgressIndicator(
+                    value: 0.55,
+                    minHeight: 5,
+                    valueColor: AlwaysStoppedAnimation(greenColor),
+                    backgroundColor: lightBackgroundColor,
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
