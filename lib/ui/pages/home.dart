@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
           horizontal: 24,
         ),
         children: [
+          // Profile
           Container(
             margin: const EdgeInsets.only(top: 40),
             child: Row(
@@ -68,7 +69,61 @@ class HomePage extends StatelessWidget {
                 )
               ],
             ),
-          )
+          ),
+          // WalletCard
+          Container(
+            height: 220,
+            width: double.infinity,
+            margin: const EdgeInsets.only(
+              top: 30,
+            ),
+            padding: const EdgeInsets.all(30),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(28),
+              image: const DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage('assets/img_bg_card.png'),
+              ),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Roman Zidane',
+                  style: whiteTextStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: medium,
+                  ),
+                ),
+                const SizedBox(
+                  height: 28,
+                ),
+                Text(
+                  '**** **** **** 1234',
+                  style: whiteTextStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: medium,
+                    letterSpacing: 6,
+                  ),
+                ),
+                const SizedBox(
+                  height: 21,
+                ),
+                Text(
+                  'Balance',
+                  style: whiteTextStyle,
+                ),
+                Text(
+                  'Rp 12.600',
+                  style: whiteTextStyle.copyWith(
+                    fontSize: 24,
+                    fontWeight: semiBold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // Level
         ],
       ),
     );
