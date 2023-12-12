@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wallet_app/shared/theme.dart';
+import 'package:wallet_app/ui/widgets/home_latest_transaction_item.dart';
+import 'package:wallet_app/ui/widgets/home_service_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -173,7 +175,111 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          // Services
+          Container(
+            margin: const EdgeInsets.only(
+              top: 30,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Do Something',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 14,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    HomeServiceItem(
+                      title: 'Top Up',
+                      iconUrl: 'assets/ic_topup.png',
+                    ),
+                    HomeServiceItem(
+                      title: 'Send',
+                      iconUrl: 'assets/ic_send.png',
+                    ),
+                    HomeServiceItem(
+                      title: 'Withdraw',
+                      iconUrl: 'assets/ic_withdraw.png',
+                    ),
+                    HomeServiceItem(
+                      title: 'More',
+                      iconUrl: 'assets/ic_more.png',
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          // Latest Transactions
+          Container(
+            margin: const EdgeInsets.only(
+              top: 30,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Latest Transactions',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(22),
+                  margin: const EdgeInsets.only(
+                    top: 14,
+                  ),
+                  decoration: BoxDecoration(
+                    color: whiteColor,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Column(
+                    children: [
+                      HomeLatestTransactionItem(
+                        imageUrl: 'assets/ic_transaction_cat1.png',
+                        title: 'Top Up',
+                        subTitle: 'Yesterday',
+                        amount: '+ 450.000',
+                      ),
+                      HomeLatestTransactionItem(
+                        imageUrl: 'assets/ic_transaction_cat2.png',
+                        title: 'Cashback',
+                        subTitle: 'Sep 11',
+                        amount: '+ 22.000',
+                      ),
+                      HomeLatestTransactionItem(
+                        imageUrl: 'assets/ic_transaction_cat3.png',
+                        title: 'Withdraw',
+                        subTitle: 'Sep 2',
+                        amount: '- 5.000',
+                      ),
+                      HomeLatestTransactionItem(
+                        imageUrl: 'assets/ic_transaction_cat4.png',
+                        title: 'Transfer',
+                        subTitle: 'Aug 27',
+                        amount: '- 123.500',
+                      ),
+                      HomeLatestTransactionItem(
+                        imageUrl: 'assets/ic_transaction_cat5.png',
+                        title: 'Electric',
+                        subTitle: 'Feb 18',
+                        amount: '- 12.300.000',
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
