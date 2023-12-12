@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wallet_app/shared/theme.dart';
 import 'package:wallet_app/ui/widgets/home_latest_transaction_item.dart';
 import 'package:wallet_app/ui/widgets/home_service_item.dart';
+import 'package:wallet_app/ui/widgets/home_user_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -273,6 +274,50 @@ class HomePage extends StatelessWidget {
                         title: 'Electric',
                         subTitle: 'Feb 18',
                         amount: '- 12.300.000',
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+          // Send Again
+          Container(
+            margin: const EdgeInsets.only(
+              top: 30,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Send Again',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 14,
+                ),
+                const SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      HomeUserItem(
+                        profilePicturUrl: 'assets/img_friend1.png',
+                        username: '@yuanita',
+                      ),
+                      HomeUserItem(
+                        profilePicturUrl: 'assets/img_friend2.png',
+                        username: '@jani',
+                      ),
+                      HomeUserItem(
+                        profilePicturUrl: 'assets/img_friend3.png',
+                        username: '@urip',
+                      ),
+                      HomeUserItem(
+                        profilePicturUrl: 'assets/img_friend4.png',
+                        username: '@masa',
                       ),
                     ],
                   ),
