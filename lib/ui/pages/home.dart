@@ -142,7 +142,7 @@ class HomePage extends StatelessWidget {
                 HomeTipsItem(
                   imageUrl: 'assets/img_tips2.png',
                   title: 'Spot the good pie of finance model',
-                  url: 'https://www.google.com/',
+                  url: 'https://www.pub.dev/',
                 ),
                 HomeTipsItem(
                   imageUrl: 'assets/img_tips3.png',
